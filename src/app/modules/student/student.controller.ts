@@ -6,7 +6,7 @@ const createStudent = async (req: Request, res: Response) => {
   try {
     const { student: studentData } = req.body;
 
-    // data validation using zod
+    // data validation using Zod
     const zodParsedData = studentValidationSchema.parse(studentData);
 
     const result = await StudentServices.createStudentIntoDB(zodParsedData);
