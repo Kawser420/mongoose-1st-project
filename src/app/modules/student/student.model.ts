@@ -190,7 +190,7 @@ studentSchema.post('save', function (doc, next) {
   next();
 });
 
-// query middleware
+// Query Middleware
 studentSchema.pre('find', function (next) {
   this.find({ isDeleted: { $ne: true } });
   next();
